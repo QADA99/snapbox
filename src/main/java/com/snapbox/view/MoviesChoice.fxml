@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.snapbox.view.MoviesChoice">
+   <children>
+      <FlowPane prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <VBox>
+               <children>
+                  <FlowPane prefHeight="150.0" prefWidth="1000.0" style="-fx-background-color: #d30303;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="150.0" prefWidth="1000.0" text="Tonight" textFill="#ffffffd4">
+                           <font>
+                              <Font name="Cambria" size="96.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </FlowPane>
+               </children>
+            </VBox>
+            <HBox prefHeight="450.0" prefWidth="1000.0" spacing="20.0">
+               <children>
+                  <VBox fx:id="movie1" alignment="BOTTOM_CENTER" prefHeight="307.0" prefWidth="306.6">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#openMovie" prefHeight="35.0" prefWidth="200.0" stylesheets="@MoviesChoice.css" text="Get Ticket" textFill="WHITE">
+                           <font>
+                              <Font name="Gadugi" size="15.0" />
+                           </font></Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding></VBox>
+                  <VBox fx:id="movie2" alignment="BOTTOM_CENTER" layoutX="50.0" layoutY="50.0" prefHeight="307.0" prefWidth="306.6" >
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#openMovie" prefHeight="35.0" prefWidth="200.0" stylesheets="@MoviesChoice.css" text="Get Ticket" textFill="WHITE">
+                           <font>
+                              <Font name="Gadugi" size="15.0" />
+                           </font>
+                        </Button>
+                     </children></VBox>
+                  <VBox fx:id="movie3" alignment="BOTTOM_CENTER" layoutX="377.0" layoutY="50.0" prefHeight="307.0" prefWidth="306.6" >
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#openMovie" prefHeight="35.0" prefWidth="200.0" stylesheets="@MoviesChoice.css" text="Get Ticket" textFill="WHITE">
+                           <font>
+                              <Font name="Gadugi" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+               </padding>
+            </HBox>
+         </children></FlowPane>
+   </children>
+</AnchorPane>
