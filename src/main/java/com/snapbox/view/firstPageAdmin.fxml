@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.snapbox.view.firstPageAdmin">
+   <children>
+      <FlowPane prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <VBox>
+               <children>
+                  <FlowPane prefHeight="150.0" prefWidth="1000.0" style="-fx-background-color: #d30303;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="150.0" prefWidth="1000.0" text="snapbox" textFill="#ffffffd4">
+                           <font>
+                              <Font name="Cambria" size="96.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </FlowPane>
+               </children>
+            </VBox>
+            <HBox prefHeight="423.0" prefWidth="1000.0" spacing="20.0">
+               <children>
+                  <VBox fx:id="addMovie" alignment="BOTTOM_CENTER" prefHeight="307.0" prefWidth="306.6">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addMovie" prefHeight="35.0" prefWidth="200.0" stylesheets="@MoviesChoice.css" text="add movie" textFill="WHITE">
+                           <font>
+                              <Font name="Gadugi" size="15.0" />
+                           </font></Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding></VBox>
+                  <VBox fx:id="addProjection" alignment="BOTTOM_CENTER" layoutX="50.0" layoutY="50.0" prefHeight="362.0" prefWidth="293.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addProjection" prefHeight="35.0" prefWidth="200.0" stylesheets="@MoviesChoice.css" text="add projection" textFill="WHITE">
+                           <font>
+                              <Font name="Gadugi" size="15.0" />
+                           </font>
+                        </Button>
+                     </children></VBox>
+                  <VBox fx:id="showReservation" alignment="BOTTOM_CENTER" layoutX="377.0" layoutY="50.0" prefHeight="307.0" prefWidth="306.6">
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#showReservation" prefHeight="35.0" prefWidth="200.0" stylesheets="@MoviesChoice.css" text="Reservations" textFill="WHITE">
+                           <font>
+                              <Font name="Gadugi" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="40.0" right="40.0" top="40.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="999.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="126.0" stylesheets="@MovieDetaill.css" text="logout" />
+               </children>
+               <padding>
+                  <Insets right="40.0" />
+               </padding>
+            </HBox>
+         </children></FlowPane>
+   </children>
+</AnchorPane>

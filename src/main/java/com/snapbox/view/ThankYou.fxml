@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="128.0" prefWidth="297.0" style="-fx-background-color: #d30000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.snapbox.view.ThankYou">
+   <children>
+      <VBox prefHeight="142.0" prefWidth="297.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="69.0" prefWidth="297.0" text="Enjoy your film" textFill="WHITE">
+               <font>
+                  <Font name="Consolas" size="30.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="73.0" prefWidth="297.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#hideStage" prefHeight="25.0" prefWidth="102.0" stylesheets="@MoviesChoice.css" text="get your ticket" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

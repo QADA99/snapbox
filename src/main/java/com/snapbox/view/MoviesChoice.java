@@ -1,14 +1,18 @@
 package com.snapbox.view;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.snapbox.JavaFxApplication;
+import com.snapbox.MainApp;
+import com.snapbox.bean.Movie;
 import com.snapbox.bean.MovieProjectTheater;
+import com.snapbox.bean.Theatre;
 import com.snapbox.model.service.MovieProjectTheaterService;
 
 import javafx.event.ActionEvent;
@@ -21,6 +25,8 @@ import javafx.scene.layout.BackgroundPosition;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.VBox;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import net.rgielen.fxweaver.core.FxmlView;
 
 @Component
@@ -47,6 +53,8 @@ public class MoviesChoice {
 	   setBackgrounds(movie2,1);
 	   setBackgrounds(movie3,2);
 
+ 
+
 }
  private void setBackgrounds(VBox movie,int i) {
 	 try {
@@ -68,6 +76,7 @@ public class MoviesChoice {
 public void openMovie(ActionEvent actionEvent) {
       Object src = actionEvent.getSource();
       Button btn = (Button)src;
+
       if(btn.getParent() == movie1) {
     	  goNext(0);
       }
@@ -78,10 +87,13 @@ public void openMovie(ActionEvent actionEvent) {
          goNext(2);
       }
 }
+public void login(ActionEvent actionEvent) {
+    MainApp.stage.setScene(MainApp.getLoginScene());
+}
 private void goNext(int i) {
-	JavaFxApplication.chosenMovieProjectTheater=this.movies.get(i);
+	MainApp.chosenMovieProjectTheater=this.movies.get(i);
    // JavaFxApplication.stage.setScene(JavaFxApplication.playWalkScene(JavaFxApplication.getMovieDetail()));
-	JavaFxApplication.stage.setScene(JavaFxApplication.getMovieDetail());
+	MainApp.stage.setScene(MainApp.getMovieDetail());
 
 }
    

@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.snapbox.JavaFxApplication;
+import com.snapbox.MainApp;
 import com.snapbox.bean.MovieProjectTheater;
 import com.snapbox.bean.Reservation;
 import com.snapbox.model.service.ReservationService;
@@ -30,6 +30,8 @@ import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import net.rgielen.fxweaver.core.FxmlView;
 
 @Component
@@ -37,7 +39,7 @@ import net.rgielen.fxweaver.core.FxmlView;
 public class ReservationController {
 	@FXML
     private AnchorPane mainView;
-
+    public static Stage thankyou;
     @FXML
     private VBox form;
 
@@ -104,7 +106,7 @@ public class ReservationController {
 	@FXML
 	public void initialize() {
 		 try {
-     		this.mv = JavaFxApplication.chosenMovieProjectTheater;
+     		this.mv = MainApp.chosenMovieProjectTheater;
      		this.price = mv.getMovie().getPrice();
      		title1.setText(mv.getMovie().getName());
      		this.title2.setText(mv.getMovie().getName());
@@ -158,14 +160,18 @@ public class ReservationController {
 	}
 	  @FXML
 	    void goBack(ActionEvent event) {
-           JavaFxApplication.stage.setScene(JavaFxApplication.getMovieDetail());
+           MainApp.stage.setScene(MainApp.getMovieDetail());
 	    }
 
 	    @FXML
 	    void pay(ActionEvent event) {
             RadioButton rb = (RadioButton)type.getSelectedToggle(); 
-	    	Reservation r = new Reservation(null, JavaFxApplication.chosenMovieProjectTheater,this.name2.getText(),rb.getText(), this.price);
-            this.rs.save(r);
+	    	Reservation r = new Reservation(null, MainApp.chosenMovieProjectTheater,this.name2.getText(),rb.getText(), this.price);
+           System.out.println(this.rs.save(r));
+            thankyou=new Stage();
+            thankyou.initStyle(StageStyle.UNDECORATED);
+            thankyou.setScene(MainApp.getThankYouScene());
+            thankyou.show();
 	    }
 
 }

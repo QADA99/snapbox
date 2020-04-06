@@ -55,6 +55,7 @@ public class MovieProjectTheater implements Serializable {
 		super();
 	}
 
+	
 	public Long getId() {
 		return id;
 	}

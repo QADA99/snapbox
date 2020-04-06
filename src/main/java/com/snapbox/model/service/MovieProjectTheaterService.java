@@ -34,7 +34,7 @@ public class MovieProjectTheaterService  {
 		MovieProjectTheater foundedProjection = findByRef(p.getRef());
 		Movie foundedMovie = movieService.findByName(p.getMovie().getName());
 		Theatre foundedTheatre = theatreService.findByName(p.getTheater().getName());
-		List<MovieProjectTheater> lists = findByDate(new Date());
+		List<MovieProjectTheater> lists = findByDate(p.getShowDate());
 		if(foundedProjection != null)
 		  return -1;
 		else if(foundedMovie ==null || foundedTheatre==null )

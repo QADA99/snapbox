@@ -26,7 +26,7 @@
                   </FlowPane>
                </children>
             </VBox>
-            <HBox prefHeight="450.0" prefWidth="1000.0" spacing="20.0">
+            <HBox prefHeight="402.0" prefWidth="1000.0" spacing="20.0">
                <children>
                   <VBox fx:id="movie1" alignment="BOTTOM_CENTER" prefHeight="307.0" prefWidth="306.6">
                      <children>
@@ -41,7 +41,7 @@
                      <padding>
                         <Insets bottom="20.0" />
                      </padding></VBox>
-                  <VBox fx:id="movie2" alignment="BOTTOM_CENTER" layoutX="50.0" layoutY="50.0" prefHeight="307.0" prefWidth="306.6" >
+                  <VBox fx:id="movie2" alignment="BOTTOM_CENTER" layoutX="50.0" layoutY="50.0" prefHeight="307.0" prefWidth="306.6">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -55,7 +55,7 @@
                            </font>
                         </Button>
                      </children></VBox>
-                  <VBox fx:id="movie3" alignment="BOTTOM_CENTER" layoutX="377.0" layoutY="50.0" prefHeight="307.0" prefWidth="306.6" >
+                  <VBox fx:id="movie3" alignment="BOTTOM_CENTER" layoutX="377.0" layoutY="50.0" prefHeight="307.0" prefWidth="306.6">
                      <padding>
                         <Insets bottom="20.0" />
                      </padding>
@@ -71,6 +71,15 @@
                <padding>
                   <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
                </padding>
+            </HBox>
+            <HBox prefHeight="48.0" prefWidth="997.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="109.0" stylesheets="@MovieDetaill.css" text="login">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
             </HBox>
          </children></FlowPane>
    </children>

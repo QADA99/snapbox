@@ -10,6 +10,7 @@ import com.snapbox.bean.Reservation;
 @Repository
 public interface ReservationDao extends JpaRepository<Reservation,Long> {
     List<Reservation> findByNameAndProjectionRef(String name,String ref);
-    List<Reservation> findByProjectionRef(String ref);
-    List<Reservation> findByName(String name);
+    List<Reservation> findByProjectionRefStartingWith(String ref);
+    List<Reservation> findByNameStartingWith(String name);
+	List<Reservation> findByProjectionMovieNameStartingWith(String name);
 }

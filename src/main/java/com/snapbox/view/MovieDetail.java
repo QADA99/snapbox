@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 
 import org.springframework.stereotype.Component;
 
-import com.snapbox.JavaFxApplication;
+import com.snapbox.MainApp;
 import com.snapbox.bean.MovieProjectTheater;
 
 import javafx.event.ActionEvent;
@@ -65,8 +65,9 @@ public class MovieDetail {
 
 	@FXML
 	public void initialize() {
-			
-			mvp = JavaFxApplication.chosenMovieProjectTheater;
+		MainApp.playMusic();
+
+			mvp = MainApp.chosenMovieProjectTheater;
 			this.director.setText(mvp.getMovie().getDirector());
 			this.cast.setText(mvp.getMovie().getCast());
 			this.genre.setText(mvp.getMovie().getCategorie());
@@ -89,11 +90,11 @@ public class MovieDetail {
 	}
 	
 	public void goBack(ActionEvent actionEvent) {
-		JavaFxApplication.stage.setScene(JavaFxApplication.goBack(JavaFxApplication.getMoviesChoiceScene()));
+		MainApp.stage.setScene(MainApp.getMoviesChoiceScene());
 		
 	}
 	public void goNext(ActionEvent actionEvent) {
-		JavaFxApplication.stage.setScene(JavaFxApplication.getReservationScene());
+		MainApp.stage.setScene(MainApp.getReservationScene());
 
 	}
     

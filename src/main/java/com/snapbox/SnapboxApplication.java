@@ -9,7 +9,7 @@ import javafx.application.Application;
 public class SnapboxApplication {
 
 	public static void main(String[] args) {
-		Application.launch(JavaFxApplication.class, args);
+		Application.launch(MainApp.class, args);
 	}
 
 }
